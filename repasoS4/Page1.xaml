@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="repasoS4.Page1" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout >
+            <Label Text="VENTANA 1" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Image Source="https://nordvpn.com/wp-content/uploads/android-vs-ios_1200x628-1.png"/>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Usuario:" FontSize="20" Grid.Row="0" Grid.Column="0" Style="{StaticResource miEstilo}"/>
+                <Label Text="Clave:" FontSize="20" Grid.Row="1" Grid.Column="0"/>
+                <Button x:Name="btnIniciar" Text="Iniciar Sesion" Clicked="btnIniciar_Clicked" Grid.Row="2" Grid.Column="0"/>
+
+                <Entry x:Name="txtUsuario" Placeholder="Ingrese el usuario" Grid.Row="0" Grid.Column="1"/>
+                <Entry x:Name="txtClave" Placeholder="Ingrese la clave" Grid.Row="1" Grid.Column="1" IsPassword="True"/>
+
+                <ImageButton Source="cancelar.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="ImageButton_Clicked" WidthRequest="50" HeightRequest="50" Grid.Row="2" Grid.Column="1"/>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
